@@ -1,8 +1,19 @@
+@import url(https://db.onlinewebfonts.com/c/51692001965b9ee30b87efdfdf0c9088?family=Koorkin+W04+Bold+Italic);
+
+.container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .reservation-container {
   font-family: Arial, sans-serif;
   color: #333;
   background: linear-gradient(135deg, #6b48ff, #00d2ff);
-  min-height: 100vh;
   padding: 20px;
 }
 
@@ -34,26 +45,52 @@
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-btn:hover {
-  text-decoration: underline;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero {
-  text-align: center;
+  text-align: left;
+  margin-left: 100px;
   color: #fff;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 60px;
   margin: 0;
+}
+
+.ital {
+  font-family: "Koorkin W04 Bold Italic", sans-serif;
+  font-size: 20px;
+  color: #6b48ff;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.events-header {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .events-section {
   width: 100%;
   padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw - 40px);
 }
 
 .events-section h2 {
@@ -62,27 +99,32 @@
 }
 
 .events-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 .event-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 10px;
+  padding: 0px;
   position: relative;
 }
 
 .event-image {
   width: 100%;
   height: 150px;
+  padding: 0;
   object-fit: cover;
 }
-
+.event-data {
+  padding: 10px;
+}
 .event-image-placeholder {
   width: 100%;
   height: 150px;
@@ -110,8 +152,12 @@
 }
 
 @keyframes move {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50%, 50%); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50%, 50%);
+  }
 }
 
 .event-card h3 {
@@ -125,13 +171,17 @@
 }
 
 .buy-btn {
-  background: #6b48ff;
-  color: #fff;
-  border: none;
+  color: #6b48ff;
+  background: #fff;
+  border: 1px solid #6b48ff;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
+  margin: 0 10px;
+}
+.buy-btn:hover {
+  width: 80%;
 }
 
 .reservations-list {
@@ -139,6 +189,8 @@
   background: #fff;
   padding: 15px;
   border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
